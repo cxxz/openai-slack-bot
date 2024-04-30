@@ -49,15 +49,15 @@ This is done by Slack App Manifest. You can also manually copy the manifest belo
 
 ```yaml
 display_information:
-  name: OpenAI Chat
-  description: An OpenAI Slack bot
+  name: Azure OpenAI Bot
+  description: An Azure OpenAI Slack bot
 features:
   app_home:
     home_tab_enabled: false
     messages_tab_enabled: true
     messages_tab_read_only_enabled: false
   bot_user:
-    display_name: OpenAI Chat
+    display_name: AOAI Bot
     always_online: true
   shortcuts:
     - name: Summarize...
@@ -72,6 +72,9 @@ features:
     - command: /gen_image
       description: Generate image from OpenAI
       usage_hint: "[a white siamese cat]"
+      should_escape: false
+    - command: /reset
+      description: Fotget the current DM conversation
       should_escape: false
 oauth_config:
   scopes:

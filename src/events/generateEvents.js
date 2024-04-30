@@ -4,6 +4,7 @@ const EVENTS = [
   "fate",
   "generateEvents",
   "genImage",
+  "resetChat",
   "message",
   "summarize",
 ];

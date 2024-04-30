@@ -66,6 +66,13 @@ class OpenAICommand {
     return res;
   }
 
+    // Add this new method to the OpenAICommand class
+  async clearChatHistory(id) {
+    this.cache.del(`conversation-${id}`);
+    logger.debug(`Cleared chat history for conversation-${id}`);
+    return "Conversation history forgotten.";
+  }
+
   async askQuestionInTheThread(locale, question, conversations) {
     logger.debug("Locale: ", locale);
     logger.debug("Question: ", question);

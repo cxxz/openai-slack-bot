@@ -20,6 +20,14 @@ class Cache {
 
     this.cache.set(key, value, ttl);
   }
+  
+  del(key) {
+    if (this.isKeyEmpty(key)) {
+      return false;
+    }
+
+    return this.cache.del(key);
+  }
 
   isKeyEmpty(key) {
     return typeof key === "undefined" || key === null;
