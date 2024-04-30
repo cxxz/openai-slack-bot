@@ -5,6 +5,7 @@ const EVENTS = [
   "generateEvents",
   "genImage",
   "resetChat",
+  "improveWriting",
   "message",
   "summarize",
 ];

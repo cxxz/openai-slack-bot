@@ -127,6 +127,19 @@ class OpenAICommand {
     );
   }
 
+  async improveWriting(text) {
+    return await this.createChatCompletion(
+      [
+        {
+          role: roles.USER,
+          content: `please improve the writing of the following text:\n` + 
+            `${text}`,
+        },
+      ],
+      { temperature: 0.1 }
+    );
+  }
+
   getNumOfMessages() {
     const numOfMessages = this.config.chat.numOfMessages;
 

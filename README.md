@@ -76,6 +76,9 @@ features:
     - command: /reset
       description: Fotget the current DM conversation
       should_escape: false
+    - command: /iw
+      description: Improve writing of the given text
+      should_escape: false
 oauth_config:
   scopes:
     bot:
